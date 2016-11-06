@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<title>Ežu Biedrība</title>
+<meta http-equiv="Content-Language" content="lv">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1257">
+<link rel="icon" href="IMG/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="Lib/style.gal.css" />
+<script type='text/javascript' src='Lib/js.js'></script>
+
+<body>
+
+<ul class="izvele">
+      <li class="izvele"><a href="Sakums.html">Sākums</a></li>
+      <li class="izvele"><a href="CV.html">Par Mani</a></li>
+      <li class="izvele"><a href="galerija.html">Galerija</a></li>
+      <li class="izvele"><a href="Anketa.html">Anketa</a></li>
+      <li class="izvele"><a href="kont.html">Kontakti</a></li>
+</ul>
+	<div id="vidus">
+		<div id="kontakti">
+        
+            <h1 class="fn">Juris Lukstiņš</h1>
+        
+            <p>
+                Tālrunis: <span class="tel">+371 28 352 050</span><br />
+                Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDJBTvpFubUDJA6BGBm86vsqzDI_y31xhM'>
+</script>
+<div id="map" style='overflow:hidden;height:400px;width:520px;'>
+	<div id='gmap_canvas' style='height:400px;width:520px;'>
+	</div>
+	<style>#gmap_canvas 
+		img{max-width:1200px;background:none!important}
+	</style>
+</div> 
+<a href='https://www.embedmap.net/'>google maps widget for website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=43a93736693480a67161544e4bbe83a0fa1fa062'>
+	
+</script>
+<script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(57.07670816720484,25.591054260730733),mapTypeId: google.maps.MapTypeId.SATELLITE};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(57.07670816720484,25.591054260730733)});infowindow = new google.maps.InfoWindow({content:'<strong>Atrašanās vieta</strong><br><br> <br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+
+<footer id="apaksa">
+    <p>Izveidojis: Juris Lukstiņš</p>
+    <p>Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a>.</p>
+</footer>
+
+</body>
+</html>

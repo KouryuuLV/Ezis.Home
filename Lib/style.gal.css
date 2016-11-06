@@ -1,0 +1,193 @@
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif}
+h2 { padding-top: 10px;
+     padding-bottom: 10px
+   }
+
+.row > .column {
+  padding: 0 0 16px;
+      
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding-bottom: 100px;
+
+}
+
+/* JS pamats */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* JS bildes */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  max-width: 1200px;
+}
+
+/* X poga */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  background-color: black;
+}
+
+/* < & > pogu formatējumjs */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* > pogas novietojums */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* hover ēna */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px 0px;
+  color: white;
+}
+
+img.mini {
+  opacity: 0.6;
+  width:  95%;
+}
+
+.active,
+.mini:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+* { margin: 0; padding: 0; }
+        body { font: 16px Arial, Sans-Serif; line-height: 24px; align-self: center }
+        .clear { clear: both; }
+        .email { color: blue; }
+        #lapa { position: center; width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        .logo {position:relative;}
+        .img { float: right;  right: 15%; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: relative; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; align-self: center}
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #kapec { width: 500px; float: left; }
+        #kapec p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        #apaksa { position: absolute; bottom: 0px; right: 50px; width: 800px; margin: 40px auto 60px;}
+        #apaksa p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+        form {position: absolute; top: 20%; left: 35%}
+        label { font-family: Georgia, Serif; font-style: italic; color: #666; font-weight: bold;}
+        #map {position: absolute; right: 35%; bottom:20%;}
+        #vidus{position: absolute; top: 25%; left: 50%; transform: translateX(-75%) translateY(-50%);}
+        footer {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 1rem;
+                text-align: center; 
+              }
+        ul.izvele {
+            list-style-type: none;
+            position: right;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li.izvele {
+            float: left;
+        }
+
+        li.izvele a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.izvele a:hover {
+            background-color: #111;
+        }
