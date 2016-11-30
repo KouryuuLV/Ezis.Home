@@ -1,13 +1,12 @@
-html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif, height:100%;}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif}
 h2 { padding-top: 10px;
-     padding-bottom: 10px
+     padding-bottom: 5px
+     ;
    }
-
-.row > .column {
-  padding: 0 0 16px;
       
 }
-
+body
+{margin-bottom:25px}
 .row:after {
   content: "";
   display: table;
@@ -114,6 +113,19 @@ h2 { padding-top: 10px;
   padding: 2px 16px 0px;
   color: white;
 }
+.map-responsive{
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:25%;
+    height:75%;
+    width:100%;
+    position:absolute;
+}
+
 
 img.mini {
   opacity: 0.6;
@@ -134,13 +146,10 @@ img.hover-shadow {
 }
 
 * { margin: 0; padding: 0; }
-        body { font: 16px Arial, Sans-Serif; line-height: 24px; align-self: center }
+        body { font: 16px Arial, Sans-Serif; line-height: 24px; align-self: center, margin-bottom:50px}
         .clear { clear: both; }
         .email { color: blue; }
         #lapa { position: center; width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        .logo {position:relative;}
-        .img { float: right;  right: 15%; }
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h2 span { position: relative; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
@@ -148,46 +157,21 @@ img.hover-shadow {
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 32px 17px; }
-        #kapec { width: 500px; float: left; }
         #kapec p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        #apaksa { position: absolute; bottom: 0px; right: 50px; width: 800px; margin: 40px auto 60px;}
-        #apaksa p { font-family: Georgia, Serif; font-style: italic; color: #666; }
         dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
         dd { width: 600px; float: right; }
         dd.clear { float: none; margin: 0; height: 15px; }
         form {position: absolute; top: 20%; left: 35%}
         label { font-family: Georgia, Serif; font-style: italic; color: #666; font-weight: bold;}
-        #map {position: absolute; right: 35%; bottom:20%;}
-        #vidus{position: absolute; top: 25%; left: 50%; transform: translateX(-75%) translateY(-50%);}
-        footer {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                padding: 1rem;
-                text-align: center; 
-              }
-        ul.izvele {
-            list-style-type: none;
-            position: right;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li.izvele {
-            float: left;
-        }
-
-        li.izvele a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li.izvele a:hover {
-            background-color: #111;
-        }
+footer 
+  {
+  text-align: center;              
+  background-color: #222;              
+  border-color: #080808;              
+  color: #9d9d9d;
+  display: table-row;
+  height: 65px;              
+  }
+  .container {
+  display: table;
+  height: 100%;                   

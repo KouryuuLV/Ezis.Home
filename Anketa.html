@@ -19,16 +19,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Sākums</a>
+      <a class="navbar-brand" href="index.html">Eži</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="cv.html">Par Mani<span class="sr-only">(current)</span></a></li>
+        <li><a href="index.html">Sākums<span class="sr-only">(current)</span></a></li>
+        <li><a href="cv.html">Par Mani<span class="sr-only">(current)</span></a></li>
+        <li><a href="ezi.html">Par Ežiem</a></li>
         <li><a href="galerija.html">Galerija</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Izvēle <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="index.html">Sākums</a></li>
             <li><a href="anketa.html">Anketa</a></li>
@@ -46,16 +48,17 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<div class="container">
+   <div class="col-lg-12 col-md-8 col-sm-6 col-xs-3">
     <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-    <div class="anketa">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="name">Vārds Uzvārds:</label><br />
         <input id="name" class="input" name="name" type="text" value="" size="50" /><br />
     </div>
         <input type="radio" name="gender" value="male" checked> vīrietis<br>
         <input type="radio" name="gender" value="female"> Sieviete<br>
         <input type="radio" name="gender" value="other"> nevēlos izpaust
-    <div class="anketa">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="email">Epasts:</label><br />
         <input id="email" class="input" name="email" type="text" value="" size="50" /><br />
     </div>
@@ -65,16 +68,18 @@
           <option value="Interese iegadaties">Interese iegādāties</option>
           <option value="Velme apmeklet kursus">Velme apmeklēt kursus</option>
     </select>
-    <div class="anketa">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <label for="message">Ziņa:</label><br />
         <textarea id="message" class="input" name="message" rows="7" cols="50"></textarea><br />
     </div>
     <input id="submit_button" type="submit" value="Send email" />
-</form>
-
-
-<footer class="footer">
-    <p>Izveidojis: Juris Lukstiņš</p>
+    </form>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<footer class="footer navbar-fixed-bottom">
+    <p>Izveidojis: <a href="cv.html">Juris Lukstiņš</a></p>
     <p>Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a>.</p>
 </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

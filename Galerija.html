@@ -10,159 +10,162 @@
 
 <body>
 
-<nav class="navbar navbar-inverse ">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Sākums</a>
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Eži</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Sākums<span class="sr-only">(current)</span></a></li>
+          <li><a href="cv.html">Par Mani<span class="sr-only">(current)</span></a></li>
+          <li><a href="ezi.html">Par Ežiem</a></li>
+          <li class="active"><a href="galerija.html">Galerija</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Izvēle <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Sākums</a></li>
+              <li><a href="anketa.html">Anketa</a></li>
+              <li><a href="galerija.html">Galerija</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="cv.html">Par Mani</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="kont.html">Kontakti</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="kont.html">Kontakti</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+<div class="container-fluid">
+  <h2 style="text-align:center; font-size: 40px ">Ežu Galerija</h2>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH1_320.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
     </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH2_320.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH3_320.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH4_320.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH5_320.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH6_320.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH7_320.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <img src="IMG/HH8_320.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+    </div>
+  </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="cv.html">Par Mani<span class="sr-only">(current)</span></a></li>
-        <li><a href="galerija.html">Galerija</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="index.html">Sākums</a></li>
-            <li><a href="anketa.html">Anketa</a></li>
-            <li><a href="galerija.html">Galerija</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="cv.html">Par Mani</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="kont.html">Kontakti</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="kont.html">Kontakti</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
 
-<h2 style="text-align:center; font-size: 40px ">Ežu Galerija</h2>
-<div class="row">
-  <div class="column">
-    <img src="IMG/HH1_320.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH2_320.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH3_320.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH4_320.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH5_320.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH6_320.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH7_320.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="IMG/HH8_320.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+      <div class="mySlides">
+        <div class="numbertext">1 / 8</div>
+          <img src="IMG/HH1_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 8</div>
+          <img src="IMG/HH2_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 8</div>
+          <img src="IMG/HH3_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 8</div>
+          <img src="IMG/HH4_1280.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">5 / 8</div>
+          <img src="IMG/HH5_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 8</div>
+          <img src="IMG/HH6_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 8</div>
+          <img src="IMG/HH7_1280.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 8</div>
+          <img src="IMG/HH8_1280.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH1_320.jpg" onclick="currentSlide(1)" alt="Lapiņš">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH2_320.jpg" onclick="currentSlide(2)" alt="Ostiņš">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH3_320.jpg" onclick="currentSlide(3)" alt="Lapsiņš">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH4_320.jpg" onclick="currentSlide(4)
+        " alt="Alfrēds">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH5_320.jpg" onclick="currentSlide(5)" alt="Puķīte">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH6_320.jpg" onclick="currentSlide(6)" alt="Zaldāts">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH7_320.jpg" onclick="currentSlide(7)" alt="Pūkaiņu Ģimene">
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <img class="mini" src="IMG/HH8_320.jpg" onclick="currentSlide(8)
+        " alt="Alfrēds">
+      </div>
+    </div>
   </div>
 </div>
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 8</div>
-        <img src="IMG/HH1_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 8</div>
-        <img src="IMG/HH2_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 8</div>
-        <img src="IMG/HH3_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 8</div>
-        <img src="IMG/HH4_1280.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 8</div>
-        <img src="IMG/HH5_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 8</div>
-        <img src="IMG/HH6_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">7 / 8</div>
-        <img src="IMG/HH7_1280.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">8 / 8</div>
-        <img src="IMG/HH8_1280.jpg" style="width:100%">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH1_320.jpg" onclick="currentSlide(1)" alt="Lapiņš">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH2_320.jpg" onclick="currentSlide(2)" alt="Ostiņš">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH3_320.jpg" onclick="currentSlide(3)" alt="Lapsiņš">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH4_320.jpg" onclick="currentSlide(4)
-      " alt="Alfrēds">
-    </div>
-    <div class="column">
-      <img class="mini" src="IMG/HH5_320.jpg" onclick="currentSlide(5)" alt="Puķīte">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH6_320.jpg" onclick="currentSlide(6)" alt="Zaldāts">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH7_320.jpg" onclick="currentSlide(7)" alt="Pūkaiņu Ģimene">
-    </div>
-
-    <div class="column">
-      <img class="mini" src="IMG/HH8_320.jpg" onclick="currentSlide(8)
-      " alt="Alfrēds">
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-    <p>Izveidojis: Juris Lukstiņš</p>
+<div class="clear"></div>
+<footer class="footer navbar-fixed-bottom">
+    <p>Izveidojis: <a href="cv.html">Juris Lukstiņš</a></p>
     <p>Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a>.</p>
 </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
