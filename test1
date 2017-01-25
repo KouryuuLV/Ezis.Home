@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Ežu Biedrība</title>
+<meta http-equiv="Content-Language" content="lv">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="IMG/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="Lib/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="Lib/css/style.css" />
+
+<body>
+<form action="add_film.php" method="post" id="add_film">
+
+    <label for="title">Movie Title</label>
+    <input type="text" name="movie_title" id="movie_title" />
+
+    <br/>
+    <br/>
+
+    <label for="actor">Leading Actor</label>
+    <input type="text" name="leading_actor" id="leading_name" />
+
+    <br/>
+    <br/>      
+
+
+    <label for="rating">Rating</label>
+    <select id="rating" name="rating"/>
+        <option selected="selected" value=0 disabled="disabled">Select a Rating</option>
+        <option value="Terrible">Terrible</option>
+        <option value="Fair">Fair</option>
+        <option value="Ok">Ok</option>
+        <option value="Good">Good</option>
+        <option value="Excellent">Excellent</option>
+    </select>
+
+    <br/>
+    <br/>
+
+
+    <label for="review">Your Review</label>
+    <br/>
+
+<footer class="footer navbar-fixed-bottom">
+    <p>Izveidojis: <a href="cv.html">Juris Lukstiņš</a>
+    </p>
+    <p>Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a>.</p>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="Lib/js/bootstrap.js"></script>
+<script src="Lib/js/form.js"></script>
+</body>
+
+</html>
