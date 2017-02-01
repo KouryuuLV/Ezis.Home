@@ -56,39 +56,4 @@ var phoneno = /^\d{10}$/igm;
     if (error) {
         e.preventDefault();        
     }
-}); 
-$(document).ready(function() {
-    $('#contact_form').formValidation({
-        framework: 'bootstrap',
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            name: {
-                validators: {
-                    notEmpty: {
-                        message: 'The name is required'
-                    },
-                    stringLength: {
-                        min: 3,
-                        max: 30,
-                        message: 'The username must be more than 3 and less than 30 characters long'
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_\.]+$/,
-                        message: 'The username can only consist of alphabetical, number, dot and underscore'
-                    }
-                }
-            },
-            password: {
-                validators: {
-                    notEmpty: {
-                        message: 'The password is required'
-                    }
-                }
-            }
-        }
-    });
-});      
+});

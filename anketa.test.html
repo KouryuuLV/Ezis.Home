@@ -7,7 +7,49 @@
 <link rel="icon" href="IMG/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="Lib/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="Lib/css/style.css" />
+<script src="Lib/js/form.test.js"></script>
 
+<script>$("document").ready(function(){
+$(".errorMsg").hide();
+$("#succMsg").hide();
+$("#send").click(function(){
+            
+                //ja poga tiek nospiesta vēlreiz likvidēt esošos li tagus un parādīt jaunos.
+                $(".waringMsg li").remove();
+
+                //paziņojumi
+                var emptyFieldMsg = "Lauks ir tukšs lūdzu aizpildiet šo lauku!";
+                var letterFieldMsg = "Lūdzu ievadiet tikai burtus!";
+                var timeFieldMsg = "Lūdzu ievadiet korektu laiku formātā 00:00";
+                var dateFieldMsg = "Lūdzu ievadiet korketu datumu formātā 0000-00-00 (yyyy-mm-dd)";
+                var emailFieldMsg = "Lūdzu ievadiet korketu epasta adresi";
+                var checkBoxMsg = "Lūdzu aizpildiet izvēlaties kādu no variantiem!";
+                var emailFieldMsg = "Lūdzu ievadiet korketu datumu formātā 0000-00-00 (yyyy-mm-dd)";
+                
+                isEmpty(emptyFieldMsg, "input[type=text]", "#eventComment");
+                onlyText(letterFieldMsg, "input[type=text]", "#date, #eventTimeFrom, #eventTimeTill, #eventPlace, #eventinfo");
+                isTime(timeFieldMsg, "input[type=text]", "#eventName, #date, #eventPlace, #eventResponsiblePerson, #eventinfo, #eventComment");
+                isDate(dateFieldMsg, "input[type=text]", "#eventName, #eventTimeFrom, #eventTimeTill, #eventPlace, #eventResponsiblePerson, #eventinfo, #eventComment");
+                isemail(emailFieldMsg, "input[type=text]", "#eventName, #eventTimeFrom, #eventTimeTill, #eventPlace, #eventResponsiblePerson, #eventinfo, #eventComment");
+                isEmpty(checkBoxMsg, "input[type=radio]", "#eventComment");
+                isChecked(checkBoxMsg, "input[name=eventProjector]", "Projektors:");
+                isChecked(checkBoxMsg, "input[name=eventComputer]", "Dators:");
+                isChecked(checkBoxMsg, "input[name=eventMicrophone]", "Mikrofons:");
+                isChecked(checkBoxMsg, "input[name=evetntSound]", "Skaņa:");
+                isChecked(checkBoxMsg, "input[name=eventIT]", "IT speciālists");
+                
+                
+                $(".errorMsg").fadeIn('slow');
+
+                if($(".waringMsg li").is(":visible") == true){
+                    $(".succMsg").hide();
+                }
+                else{
+                    $(".errorMsg").hide();  
+                    $(".succMsg").show();
+                    resetFields();
+});
+</script>
 <body>
 <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
@@ -56,6 +98,15 @@
 
     <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 container form-group">
     <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+    <div class="row">
+                <div class="alert alert-success succMsg">
+                    <strong>Veiksmīgi!</strong>Pasākums pieteikts!:)
+                </div>
+                <div class="alert alert-danger errorMsg">
+                  <strong>Uzmanību! Pievērsiet lūdzu uzmanību sekojošiem laukiem!</strong>
+                  <ul class="waringMsg"></ul>
+                </div>
+    </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <label for="name">Vārds:</label><br />
           <input id="name" class="form-control" name="name" type="text" value="" size="50" /><br />
@@ -335,7 +386,7 @@
         <option value="Yemen" title="Yemen">Yemen</option>
         <option value="Zambia" title="Zambia">Zambia</option>
         <option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
-</select>
+      </select>
       <div class="radio">
         <label><input type="radio" name="optradio" >Nevelos izpaust</label>
       </div>
@@ -352,9 +403,25 @@
             <label for="comment">Ziņa:</label><br/>
             <textarea id="comment" class="form-control" name="comment" rows="7" cols="50"></textarea><br/>
         </div>
-        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">Pabeigt!</button>
-          
-      </div>
+        <button Id="send" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">Pabeigt!</button>
+
+        <!-- <div class="modal fade" id="mymodal">
+          <div cass="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">x</button>
+            <h1>Veiksmiga registracija</h1>
+
+            </div>
+
+            <div class="modal-body"> <p>teksts</p>
+
+              <button type="button" class"btn btn-default" data-dismiss="modal">Aizvert!</button>
+            </div>
+            </div>
+          </div>
+        </div>-->
+      </div> 
     </form>
 <div class=class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 35px">
 <P>         
@@ -385,5 +452,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="Lib/js/bootstrap.js"></script>
-<script src="Lib/js/form.js"></script>
+
 </html>
