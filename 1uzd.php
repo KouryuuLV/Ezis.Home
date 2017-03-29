@@ -1,124 +1,207 @@
-<!DOCTYPE html>
-<html>
-<title>Ežu Biedrība</title>
-<meta http-equiv="Content-Language" content="lv">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="IMG/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="Lib/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="Lib/css/style.css" />
+<?php
+class Main
+{
+    function getPhpVersion()
+    {
+        //1uzd
+        echo 'Current PHP version: ' . phpversion();
+        phpinfo();
+    }
+
+    function showText()
+    {
+        //2uzd
+        $welcome = "Let's get started with PHP!";
+        echo $welcome;
+    }
+
+    function sum($number1, $number2)
+    {
+        //3uzd
+        $result = $number1 + $number2;
+        echo $result;
+
+    }
+
+    function showLength()
+    {
+
+        //4uzd
+        echo strlen("Sveiki!");
+
+    }
+
+    function showPos()
+//($msg, $pos)
+    {
+
+        //5uzd
+        $mystring = 'Es mācos programmēt PHP valodā.';
+        $findme   = 'p';
+        $pos = strpos($mystring, $findme);
+
+        // Note our use of ===.  Simply == would not work as expected
+        // because the position of 'a' was the 0th (first) character.
+        if ($pos === false) {
+            echo "The string '$findme' was not found in the string '$mystring'";
+        } else {
+            echo "The string '$findme' was found in the string '$mystring'";
+            echo " and exists at position $pos";
+        }
+
+//        $text = "Es mācos programmēt PHP valodā";
+//        echo "<b>" . $msg . "</b>" . " " . strpos($text, $pos);
+    }
+
+    function showDesign()
+    {
+        //6uzd
+        echo "<p><b>''PHP ir php</b>.<i> skriptu valoda ar kuras</i>.<u> palīdzību tiek veidoti</u>.<b> MySql vaicājumi</b>.</p>";
+
+//        echo "<p><strong>``PHP ir php </strong><i>skriptu valoda
+//                    ar kuras </i> <u> palīdzību tiek veidoti </u><strong>MySql vaicājumi”.</p>";
+    }
+
+
+        //7uzd
+        Function PrintList($start, $end)
+        {
+            for ($number = $start; $number <= $end; $number++)
+            {
+                if ($number <= ($end - 1))
+                    {
+                    echo $number . ", ";
+                    } else {
+                        echo $number . "!";
+                    }
+            };
+        }
+
+    function showWhileLoop()
+    {
+        Function PrintList($start, $end){
+            $number = $start;
+            while ($number <= $end)
+            {
+                if ($number <= ($end - 1)) {
+            echo $number . ", ";
+            } else {
+                echo $number . "!";
+            }
+            $number++;
+            };
+        }
+
+//        $x = 1;
+//        while ($x <= 100) {
+//
+//            print $x;
+//            echo " ";
+//            $x++;
+//        }
+    }
+
+    function showColumn()
+    {
+        ?>
+
+        //8uzd
+        Function PrintDownList($sakums, $beigas){
+        for ($leap = 0; $leap < 10; $leap = $leap + 1) {
+        echo "<p>$leap</p>";
+        }
+        };
+
+<!--        <table>-->
+<!--            --><?php
+//            for ($a = 1; $a <= 10; $a = $a + 1) {
+//                ?>
+<!--                <tr>-->
+<!--                    <td>--><?php //echo $a; ?><!--</td>-->
+<!--                    <td>--><?php //echo $a; ?><!--</td>-->
+<!--                    <td>--><?php //echo $a; ?><!--</td>-->
+<!--                </tr>-->
+<!---->
+<!--            --><?php //}; ?>
+<!---->
+<!---->
+<!--        </table>-->
+
+        <?php
+
+    }
+
+    function showSwitch($myNum)
+    {
+
+        switch ($myNum) {
+            case 1:
+                echo "Jūsu meklētais skaitlis tika atrasts";
+                break;
+            case 2:
+                echo "Jūsu meklētais skaitlis tika atrasts";
+                break;
+            case 3:
+                echo "Jūsu meklētais skaitlis tika atrasts";
+                break;
+            default:
+                echo "Neviens no skaitļiem netika atrasts";
+        }
+    }
+
+    function showSwitchII($z) {
+        switch ($z):
+            case "mandarīns":
+                echo "Jūsu auglis ir šajā sarakstā";
+                break;
+            case "apelsīns":
+                echo "Jūsu auglis ir šajā sarakstā";
+                break;
+            default:
+                echo "<p>Auglis $z sarakstā nav!</p>";
+        endswitch;
+    }
+
+    function showIf($Hello){
+
+        if (strlen($Hello) < 4) {
+            echo "<p>Mainīgā Hello vērtība ir mazāka par 4</p>";
+        } elseif (strlen($Hello) > 4) {
+            echo "Mainīgā Hello vērtība ir lielāka par 4";
+        } else {
+            echo "brrrrrrrrrrrrrrrrrrrrrrrr";
+
+        }
+    }
+
+    function showAlphabet(){
+        $alfabets = range('A', 'Z');
+        foreach ($alfabets as $letter) {
+            print("<p>$letter\n</p>");
+        }
+    }
+
+    function showChar(){
+        for ($char = 127; $char >= 64; $char --) {
+            echo  ("<strong>$char</strong> = ").chr("$char"); echo " ".", ";
+
+
+        }
+    }
+
+}
+?>
 
 
 <body>
 
-<nav class="navbar navbar-inverse ">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Eži</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Sākums<span class="sr-only">(current)</span></a></li>
-                <li><a href="cv.html">Par Mani<span class="sr-only">(current)</span></a></li>
-                <li><a href="ezi.html">Par Ežiem</a></li>
-                <li><a href="galerija.html">Galerija</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Izvēle <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="index.html">Sākums</a></li>
-                        <li><a href="anketa.html">Anketa</a></li>
-                        <li><a href="galerija.html">Galerija</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="cv2.html">Par Mani</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="kont.html">Kontakti</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="kont.html">Kontakti</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-<div class="container">
-//1
 <?php
 
-    //1uzd
-    echo 'Current PHP version: ' . phpversion();
-        phpinfo();
-    //2uzd
-    $welcome = "Let's get started with PHP!";
-    echo $welcome;
-
-    //3uzd
-    $summa = 5 + 6;
-    echo $summa;
-
-    //4uzd
-    echo strlen("Sveiki!");
-
-    //5uzd
-    $mystring = 'Es mācos programmēt PHP valodā.';
-    $findme   = 'p';
-    $pos = strpos($mystring, $findme);
-
-    // Note our use of ===.  Simply == would not work as expected
-    // because the position of 'a' was the 0th (first) character.
-    if ($pos === false) {
-        echo "The string '$findme' was not found in the string '$mystring'";
-    } else {
-        echo "The string '$findme' was found in the string '$mystring'";
-        echo " and exists at position $pos";
-    }
-    //6uzd
-    echo <b>"PHP ir php"</b>.<i>" skriptu valoda ar kuras"</i>.<u>" palīdzību tiek veidoti"</u>.<b>" MySql vaicājumi"</b>;
-
-    //7uzd
-    Function PrintList($sakums, $beigas){
-        $number = $sakums;
-        for ($sakums = 1; $number <= $beigas; $number++)
-        {
-            if ($number <= ($beigas - 1) {
-            echo $number . ", ";
-        } else {
-            echo $number . "!";
-        }
-        };
-    }
-
-    //8uzd
-    Function PrintDownList($sakums, $beigas){
-    for ($leap = 0; $leap < 10; $leap = $leap + 1) {
+//8uzd
+    Function PrintDownList($start, $end){
+    for ($leap = $start; $leap < $end; $leap = $leap + 1) {
     echo "<p>$leap</p>";
     }
     };
     //9uzd
-
-
-
-
-
-
 ?>
-</div>
-<footer class="footer navbar-fixed-bottom">
-    <p>Izveidojis: <a href="cv.html">Juris Lukstiņš</a></p>
-    <p>Epasts: <a class="email" href="mailto:juris.lukstins@gmail.com">juris.lukstins@gmail.com</a></p>
-</footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="Lib/js/bootstrap.js"></script>
-</body>
-</html>
